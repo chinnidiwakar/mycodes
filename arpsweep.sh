@@ -5,6 +5,21 @@ for host in $(seq 1 254);
 do arping -c 1 $iprange$host |grep "bytes from" |cut -d " " -f5;
 done;
 
+#subprocess based
+#!/usr/bin/python
+
+import subprocess
+import os
+
+
+netbites = raw_input("please enter the first three parts of the ip range ending with .: ")
+for i in range(1, 255):
+  ipaddr = netbites+str(i)
+  ping = os.system("ping -c 1 %s |grep 'bytes from' > /dev/null 2>&1" %ipaddr)
+  if ping == 0:
+    print ipaddr
+  else:
+    pass
 
 
 #!/bin/bash
