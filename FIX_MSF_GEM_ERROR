@@ -1,0 +1,4 @@
+cd /usr/share/metasploit-framework
+gem install bundler
+bundle install
+gem update --system
