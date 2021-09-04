@@ -9,7 +9,7 @@ def encode():
 	print "\nYour Encoded Text Is: "+str(encoded)
 	print "\nThanks For Using"
 def decode():
-	data = raw_input("\nEnter the data you want to encode: ")
+	data = raw_input("\nEnter the data you want to decode: ")
 	decoded = base64.b64decode(data)
 	print "\nYour Decoded Text Is: "+str(decoded)
 	print "\nThanks For Using"
